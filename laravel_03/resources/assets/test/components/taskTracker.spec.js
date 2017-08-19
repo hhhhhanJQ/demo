@@ -92,11 +92,11 @@ describe('TaskTrackerComponent', () => {
         console.log(vm.$el);
         var btnMouse0=vm.$el.querySelector('#red11');
         console.log(btnMouse0);
-        var btnMouse1=Util.triggerEvent(btnMouse0,'mouseover');
+        Util.triggerEvent(btnMouse0,'mouseover');
 
-        // Vue.nextTick(()=> {
-        //     expect(btnMouse1.style.color).toEqual('red');
-        // });
+        Vue.nextTick(()=> {
+            expect(btnMouse1.style.color).toEqual('red');
+        });
     })
 
 
